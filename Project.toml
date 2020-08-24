@@ -1,0 +1,7 @@
+name = "TestTUI"
+uuid = "8c68ce92-008f-45ad-a3d6-04d0e3531b25"
+authors = ["lorenzoh <lorenz.ohly@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
