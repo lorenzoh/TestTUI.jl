@@ -3,5 +3,14 @@ uuid = "8c68ce92-008f-45ad-a3d6-04d0e3531b25"
 authors = ["lorenzoh <lorenz.ohly@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+CodeTracking = "da1fd8a2-8d9e-5ec2-8556-3022fb5608a2"
+Glob = "c27321d9-0574-5035-807b-f59d2c89b15c"
+Parameters = "d96e819e-fc66-5662-9728-84c9c7592b0a"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+Suppressor = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
+TerminalUserInterfaces = "408767e4-586b-40c7-9657-f9758988469a"
+
 [compat]
 julia = "1"
