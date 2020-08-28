@@ -14,11 +14,21 @@ function istestablepackage(path)
 end
 
 
-function sourcepaths(packagepath)
+function sourcepaths(packagepath; include_tests = true)
     srcfolder = joinpath(packagepath, "src")
     @assert isdir(srcfolder)
-    files1 = glob("*.jl", srcfolder)
-    files2 = glob("**/*.jl", srcfolder)
-    folders = glob("**/", srcfolder)
+    srcpaths = getfoldersandjlfiles(srcfolder)
+    if include_tests
+        testfolder = joinpath(packagepath, "test")
+        srcpaths = vcat(srcpaths, getfoldersandjlfiles(testfolder))
+    end
+    return srcpaths
+end
+
+
+function getfoldersandjlfiles(folder)
+    files1 = glob("*.jl", folder)
+    files2 = glob("**/*.jl", folder)
+    folders = glob("**/", folder)
     return vcat(files1, files2, folders)
 end

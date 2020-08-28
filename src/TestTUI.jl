@@ -5,7 +5,7 @@ Remaining problems:
 - printing of outputs is cut off. See `paragraph.jl` in TerminalUserInterfaces
 
 ToDo:
-- help text for unfinished tasks in "results" box
+- also track files in `test` directory
 =#
 
 using Glob
@@ -84,9 +84,7 @@ function testtui(packagepaths::Vector{String})
     startwatching(packagepaths, results, channel)
     Threads.@spawn starttesting(resultdict, channel)
 
-    @async begin
-        tuiloop(results)
-    end
+    tuiloop(results)
 
     return results, channel
 end
