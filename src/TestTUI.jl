@@ -67,7 +67,7 @@ function starttesting(resultdict, channel)
                 result.state = newresult.state
             end
         catch e
-            @error e
+            @error e pkg=packagepath
         end
     end
 end
